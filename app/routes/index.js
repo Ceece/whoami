@@ -1,9 +1,10 @@
 'use strict';
 
+var Whoami = require(process.cwd() + '/app/controllers/Whoami.server.js');
+
+
 module.exports = function (app) {
 
-   app.route('/')
-      .get(function (req, res) {
-         res.sendFile(process.cwd() + '/public/index.html');
-      });
+   app.route('/').get(Whoami);
+   
 };
