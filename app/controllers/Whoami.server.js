@@ -1,5 +1,3 @@
-var useragent = require('express-useragent');
-
 module.exports = function(req, res) {
 	res.json({
 		ip: req.ip,
