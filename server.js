@@ -10,6 +10,8 @@ app.use('/controllers', express.static(process.cwd() + '/app/controllers'));
 
 routes(app);
 
-app.listen(process.argv[2] || 8080, function () {
-   console.log('Node.js listening on port ' + process.argv[2]);
+var port = process.env.PORT || 8080;
+
+app.listen(port, function () {
+   console.log('Node.js listening on port ' + port);
 });
